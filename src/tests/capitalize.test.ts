@@ -14,4 +14,5 @@ test('Capitalize: Returns empty string when passed an empty string ""', () => {
 
 test('Capitalize: Does nothing when the first character is not an english letter', () => {
     expect(capitalize('4th test')).toBe('4th test')
+    expect(capitalize('...test')).toBe('...test')
 })
