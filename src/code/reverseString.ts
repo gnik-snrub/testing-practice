@@ -1,5 +1,5 @@
 const reverseString = (str: string) => {
-    return str
+    return str.split('').reverse().join('')
 }
 
 export default reverseString
