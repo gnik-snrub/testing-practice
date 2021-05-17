@@ -25,9 +25,13 @@ test('Caesar: Keeps relevant characters in uppercase', () => {
 })
 
 test('Caesar: Throws error when non-English characters are used', () => {
-    expect(caesar('test #7', 1)).toThrow()
+    expect(() => {caesar('test #7', 1)}).toThrow(Error)
 })
 
 test('Caesar: Returns empty string when empty string is supplied', () => {
     expect(caesar('')).toBe('')
+})
+
+test('Caesar: Returns original string when given a shift value of 0', () => {
+    expect(caesar('final test', 0)).toBe('final test')
 })
